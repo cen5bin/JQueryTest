@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<div id="asd"></div>
+<p id="asd"></p>
+<input type="text" name="aaaaa">
+
+<script type="text/javascript">
+    function test(asd) {
+        this.name = asd;
+    }
+
+    $(document).ready(function(){
+        var x = new test("3aa");
+//        alert(x.name);
+        $("div#asd").text("aaaa").css("background-color", "red");
+        $("p#asd").text("bbbb").css("background-color", "blue");
+        $("input[name='aaaaa']").css("width","200px").val("asd");
+        $("<p>asdadsada</p>").appendTo("div#asd");
+        $("div#asd").click(function(){
+            alert("click");
+        });
+        $("div#asd").bind("mouseover", function(event){
+            alert("aaa");
+        });
+        alert("aa");
+//        $("div#asd").focus(function(){
+//            alert("blur");
+//        });
+    });
+</script>
+</body>
+</html>
